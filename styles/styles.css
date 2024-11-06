@@ -59,3 +59,156 @@ nav {
   left: 5px;
   cursor: pointer;
 }
+
+.main-heading {
+  text-transform: uppercase;
+  text-align: center;
+  color: #113343;
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+  font-weight: 900;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992x) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.card {
+  background-color: #f3f4f5;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem #0000005a;
+  display: flex;
+  overflow: hidden;
+}
+
+@media (max-width: 780px) {
+  .card {
+    flex-direction: column;
+  }
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__heading {
+  color: #113343;
+  position: relative;
+}
+
+.card__heading::before {
+  content: "";
+  position: absolute;
+  width: 6rem;
+  height: 0.125rem;
+  background-color: #328677;
+  left: 0;
+  bottom: -0.8rem;
+}
+
+.card__desc-container {
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.card__desc-time {
+  text-transform: uppercase;
+  color: #328677;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card__paragraph {
+  color: #113343;
+  line-height: 1.33em;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination li {
+  border: 2px solid #328677;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.pagination li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #328677;
+  font-weight: 600;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
+}
+
+main::before {
+  content: "";
+  display: block;
+  background-image: url(../Export/SVG/bg-lines.svg);
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 150%;
+}
+
+main::after {
+  content: "";
+  display: block;
+  background-image: url(../Export/SVG/bg-lines.svg);
+  height: 150%;
+  width: 200px;
+  top: 0;
+  right: 0;
+  transform: rotateY(180deg);
+  position: absolute;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
